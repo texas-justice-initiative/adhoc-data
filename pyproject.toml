@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "ad hoc data analysis"
+version = "0.1.0"
+description = "notebooks to analyze data for arnold ventures project"
+authors = ["elaine ayo <projects@elaineayo.com>"]
+
+############### ADDITIONAL DEPENDENCY GROUPS
+# optional dependency groups besides dev/base
+[tool.poetry.group.analytics]
+optional = true
+
+############### DEPENDENCY/BUILD INFORMATION
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "*"
+pandas = "*"
+python-dotenv = "*"
+sqlalchemy = "*"
+psycopg2-binary = "*"
+requests = "*"
+pendulum = "*"
+pymupdf = "*"
+fsspec = "^2024.3.1"
+s3fs = "^2024.3.1"
+openpyxl = "^3.1.2"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+
+[tool.poetry.group.analytics.dependencies]
+jupyter = "*"
+notebook = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
